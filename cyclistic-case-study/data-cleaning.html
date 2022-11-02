@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!-- Template by freewebsitetemplates.com -->
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Business Solutions</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+</head>
+<body>
+<div id="header-cont">
+	<div id="header">
+			<div id="logo">
+				<a href="index.html"><img src="images/logo.jpg" alt="" /></a>		
+			</div>		
+			<div class="menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="final-report.html">Final Report</a></li>
+                  <li><a href="overview-dash.html">Dashboard</a></li>
+                  <li class="active"><a href="data-cleaning.html">Data Cleaning Process</a></li>
+                </ul>
+            </div>
+            <div class="clr"></div>
+	</div>
+</div>
+	<div id="container">
+		<div class="data-cleaning">
+			<h1>Data Cleaning Process</h1>
+			<div>
+            
+            <p><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">1. Document Description</span></span></u></strong></span></span></p>
+				<p class="dc-content"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">For the purpose of this case study, only data collected between September 2021 - August 2022 will be assessed.</span></span></span></span></p>
+
+<p class="dc-content"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Please note that Cyclistic is a fictional company. Raw data has been collected by Motivate International Inc, the company which operates the City of Chicago&rsquo;s Divvy bicycle sharing service. The license to use this public dataset can be found <span class="link"><a href="https://ride.divvybikes.com/system-data" target="_blank">here</a></span>.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">2. Data Tools Used</span></span></u></strong></span></span></p>
+
+<p class="dc-content"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">In this analysis, I will be using Microsoft Excel XLS for data sets fomat, MySQL for the data cleaning, analysis and manipulation of data, and Navicat Premium for the Database Graphical UI.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-family:&quot;Open Sans&quot;,sans-serif"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Excel</span></span></strong></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Load all .CSV format data sets and saved them into .XLS format.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-family:&quot;Open Sans&quot;,sans-serif"><strong><span style="font-size:18.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">MySQL</span></span></strong></span></p>
+
+
+<ol>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Import and merge all 12 months trip data into one table (divvy_tripdata).</span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of divvy_tripdata : 5883043</span></span></span></p>
+
+<ol start="2">
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change data type of field started_at and ended_at from string type to datetime type to help with analysis.</span></span></span></li>
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Create a column called &ldquo;day_of_week&rdquo; with smallint data type that calculate the day of the week that each ride started.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+  <p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SET </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">day_of_week = WEEKDAY(started_at);</span></span></span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 5883043</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of divvy_tripdata : 5883043</span></span></span></p>
+
+<ol start="4">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Create a column called &ldquo;ride_length&rdquo; with integer data type that calculate the length of each ride by subtracting the column &ldquo;started_at&rdquo; from the column &ldquo;ended_at&rdquo; in seconds.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SET </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">ride_length = TIMESTAMPDIFF(SECOND, started_at, ended_at);</span></span></span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 5883043</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of divvy_tripdata : 5883043</span></span></span></p>
+
+<ol start="5">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Remove rows with ride_length &lt; 0</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">There were a few invalid data points with ride lengths less than 0. These data points should be deleted from the cleaned dataset.</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">These deleted 135 records of data from total records 5883043 into 5882908.</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">DELETE FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata <span style="color:#0070c0">WHERE </span>ride_length &lt; <span style="color:#00b050">0</span>;</span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 135</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of divvy_tripdata : 5882908</span></span></span></p>
+
+<ol start="6">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Remove incomplete rows</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">There were a few instances where there were no recorded station names. These incomplete rows of data should be removed.</span></span></span></span></p>
+
+<p style="margin-left:30px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">6.1   Delete rows with start_station_name is null or empty</span></span></span></span></p>
+
+<p style="margin-left:55px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">These deleted 884338 records of data from total records 5882908 into 4998570.</span></span></span></span></p>
+
+<p style="margin-left:55px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">DELETE FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">start_station_name </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">IS NULL</span></span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">OR</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"> start_station_name = <span style="color:red">&#39;&#39;</span>;</span></span></span></p>
+</span>
+
+<p style="margin-left:55px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 884338</span></span></span></span></p>
+
+<p style="margin-left:55px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of divvy_tripdata : 4998570</span></span></span></span></p>
+
+<p style="margin-left:30px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">6.2   Delete rows with end_station_name is null or empty</span></span></span></span></p>
+
+<p style="margin-left:55px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">These deleted 438523 records of data from total records 4998570 into 4560047.</span></span></span></span></p>
+
+<p style="margin-left:55px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">DELETE FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">end_station_name </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">IS NULL</span></span></span> </span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">OR</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"> end_station_name = </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:red">&#39;&#39;</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">;</span></span></span></span></span></p>
+</span>
+
+<p style="margin-left:55px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 438523</span></span></span></span></p>
+
+<p style="margin-left:55px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of divvy_tripdata : 4560047</span></span></span></span></p>
+
+<ol start="7">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Remove duplicates</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The ride_id column is unique to each ride. This column should be reviewed to see if there are any duplicates to delete.</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Checking :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">ride_id, </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">COUNT</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(ride_id) </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">GROUP BY </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">ride_id</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">HAVING COUNT</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(ride_id) &gt; <span style="color:#00b050">1</span>;</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records : 0</span></span></span></span></p>
+
+<ol start="8">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Check value for member_casual if there is unvalid data other than member or casual</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT DISTINCT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">member_casual </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata;</span></span></span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The above line of code returned two user types used in the cleaned dataset : member &amp; casual.</span></span></span></span></p>
+
+<ol start="9">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Check rideable type</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT DISTINCT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">rideable_type </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata;</span></span></span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The above line of code returned three bike types used in the cleaned dataset.</span></span></span></span></p>
+
+<ol start="10">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="background-color:#f7f7f7"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Check station name</span></span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Firstly, a data table which lists the unique station names should be created.</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">INSERT INTO</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"> divvy_stations (id, name, total_trip, city, latitude, longitude, dpcapacity, online_date)</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT DISTINCT</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"> start_station_id, start_station_name, </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">COUNT</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(ride_id), </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:red">&#39;Chicago&#39;</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">, <span style="color:#00b050">0</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">, </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">0</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">, </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">0</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">, NOW()</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">divvy_tripdata</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">GROUP BY</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"> start_station_id, start_station_name</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">ORDER BY </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">start_station_name;</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 1382</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of divvy_stations : 1382</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The above line of code inserted 1382 records of unique station_name used in the cleaned dataset and the total number of trips for each station_name. This identify how many times station_name used in the cleaned dataset.</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">If we filter the total_trip of the station_name data table by count &lt; 12 it highlights that there are a few stations which have been added and/or removed from Cyclistic&rsquo;s portfolio as well as help identify which stations were not used in a particular month.</span></span></span></span></p>
+
+			</div>
+		</div>
+	</div>
+		<div id="footer">
+			<div>
+				<p>&copy Copyright 2022 by Felice. All rights reserved</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!-- Template by freewebsitetemplates.com -->
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Business Solutions</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+</head>
+<body>
+<div id="header-cont">
+	<div id="header">
+			<div id="logo">
+				<a href="index.html"><img src="images/logo.jpg" alt="" /></a>		
+			</div>		
+			<div class="menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active"><a href="final-report.html">Final Report</a></li>
+                  <li><a href="activity-overview-dash.html">Dashboard</a></li>
+                  <li><a href="data-cleaning.html">Data Cleaning Process</a></li>
+                </ul>
+            </div>
+            <div class="clr"></div>
+	</div>
+</div>
+	<div id="container">
+		<div class="about">
+			<h1>Final Report</h1>
+			<div>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Date : 2022-10-25</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">1. Introduction</span></span></u></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Ur&scaron;ka Sr&scaron;en and Sando Mur founded Bellabeat, a high-tech company that manufactures health-focused smart products. Sr&scaron;en used her background as an artist to develop beautifully designed technology that informs and inspires women around the world. Collecting data on activity, sleep, stress, and reproductive health has allowed Bellabeat to empower women with knowledge about their own health and habits. Since it was founded in 2013, Bellabeat has grown rapidly and quickly positioned itself as a tech-driven wellness company for women.</span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">By 2016, Bellabeat had opened offices around the world and launched multiple products. Bellabeat products became available through a growing number of online retailers in addition to their own e-commerce channel </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">on their website. The company has invested in traditional advertising media, such as radio, out-of-home billboards, print, and television, but focuses on digital marketing extensively. Bellabeat invests year-round in Google Search, maintaining active Facebook and Instagram pages, and consistently engages consumers on Twitter. Additionally, Bellabeat runs video ads on Youtube and display ads on the Google Display Network to support campaigns around key marketing dates.</span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Sr&scaron;en knows that an analysis of Bellabeat&rsquo;s available consumer data would reveal more opportunities for growth. She has asked the marketing analytics team to focus on a Bellabeat product and analyze smart device usage data in order to gain insight into how people are already using their smart devices. Then, using this information, she would like high-level recommendations for how these trends can inform Bellabeat marketing strategy</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">.</span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">2. Summary</span></span></u></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">2.1 Business Task :</span></span></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Analyze smart device fitness data in order to discover new growth opportunities for the company through improved marketing.</span></span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">2.2 Stakeholders :</span></span></strong></span></span></p>
+
+<ul>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Urska Srsen (Bellabeats cofounder and Chief Creative Officer)</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Sando Mur (Mathematician and bellabeat&rsquo;s co-founder; key member of the Bellabeat executive team)</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Bellabeat marketing analytics team</span></span></span></li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">3. Prepare</span></span></u></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">3.1 Dataset Information</span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Data was obtained on Kaggle from the owner Mobius. The data was collected through a distributed survey through Amazon Mechanical Turk. 33 fitbit users consented to the submission of personal tracker data, including minute-level output for physical activity, heart rate, and sleep monitoring from 04/12/2016 to 05/12/2016.</span></span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">3.2 Accessibility and Usage</span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The data is CC0: Public Domain meaning it is open-source and can be modified/used in any way by anyone.</span></span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">3.3 Dataset Organization</span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The data is organized into 18 CSV files. The files contain the following information:</span></span></span></p>
+
+<table cellspacing="0" class="table-data" style="border-collapse:collapse;">
+		<tr>
+			<th width="210px">File Name</th>
+			<th width="330px">Data Contained</th>
+			<th width="110px">Number of Users</th>
+			<th width="130px">Dates</th>
+		</tr>
+		<tr>
+			<td>dailyActivity_merged</td>
+			<td>Daily steps, distance, number of logged activities, calories, and both distance and minutes of activity by level</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>dailyCalories_merged</td>
+			<td>Daily calories</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>dailyIntensities_merged</td>
+			<td>Daily intensity in minutes and distance by activity level</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>dailySteps_merged</td>
+			<td>Daily steps</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>heartrate_seconds_merged</td>
+			<td>Heartrate every 5 seconds</td>
+			<td>14</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>hourlyCalories_merged</td>
+			<td>Hourly calories burned</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>hourlyIntensities_merged</td>
+			<td>Hourly total and average intensity</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>hourlySteps_merged</td>
+			<td>Hourly steps</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>minuteCaloriesNarrow_merged</td>
+			<td>Calories burned by the minute (narrow form)</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>minuteCaloriesWide_merged</td>
+			<td>Calories burned by the minute (wide form)</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>minuteIntensitiesNarrow_merged</td>
+			<td>Intensity counted by the minute (narrow form)</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>minuteIntensitiesWide_merged</td>
+			<td>Intensity counted by the minute (wide form)</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>minuteMETsNarrow_merged</td>
+			<td>Metabolic equivalent of task (energy ratio versus at rest) by the minute</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>minuteSleep_merged</td>
+			<td>Sleep by the minute</td>
+			<td>24</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>minuteStepsNarrow_merged</td>
+            <td>Steps tracked by the minute (narrow form)
+			</td>
+            <td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>minuteStepsWide_merged</td>
+			<td>Steps tracked by the minute (wide form)</td>
+			<td>33</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>sleepDay_merged</td>
+			<td>Daily sleep with number of times sleeping, minutes sleeping, minutes in bed</td>
+			<td>24 (21)*</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+		<tr>
+			<td>weightLogInfo_merged</td>
+			<td>Weight (in kilograms and pounds) with BMI</td>
+			<td>8</td>
+			<td>04/12/2016 - 05/12/2016</td>
+		</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">For this analysis, the CSV files tracking information by the minute was not utilized as that level of detail is not necessary for the bigger picture analysis. Additionally, the MET (Metabolic equivalent of task) data was not used as this information is useful only as a comparison for each individual user. MET data shows a user their level of exertion from a baseline but cannot really be used as a comparison between users. Therefore, this data is not necessary for analysis.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">4. Process</span></span></u></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">4.1 Data Tools Used</span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">In this analysis, I will be using Microsoft Excel XLS for data sets fomat and basic cleaning, MySQL for the data cleaning, analysis and manipulation of data, Navicat Premium for the Database Graphical UI, and Tableau for the creation of visuals.</span></span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">4.2 Cleaning and Manipulation of Data</span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The full data cleaning process has been documented in &ldquo;<span style="color:#2980b9">Data Cleaning Process</span>&rdquo;.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5. Analysis</span></span></u></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.1 <span style="background-color:white">The Average User</span></span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">We can determine what the average user is like by looking at averages data. We can then compare this to the average person to determine how close our data sample is to the actual population.</span></span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="color:rgba(0, 0, 0, 0.7)"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Calculating Averages for each daily metric :</span></span></span></span></span></p>
+
+<table cellspacing="0" class="table-avg" style="border-collapse:collapse;">
+		<tr>
+			<th style="width:300px">Daily Metric</th>
+			<th style="width:284px">Average Value from Dataset</th>
+		</tr>
+		<tr>
+			<td>Average Steps</td>
+			<td>7,638</td>
+		</tr>
+		<tr>
+			<td>Average Distance</td>
+			<td>5.49</td>
+		</tr>
+		<tr>
+			<td>Average Calories</td>
+			<td>2,304</td>
+		</tr>
+		<tr>
+			<td>Average Very Active Minutes</td>
+			<td>21.16</td>
+		</tr>
+		<tr>
+			<td>Average Fairly Active Minutes</td>
+			<td>13.56</td>
+		</tr>
+		<tr>
+			<td>Average Lightly Active Minutes</td>
+			<td>192.81</td>
+		</tr>
+		<tr>
+			<td>Average Sedentary Minutes</td>
+			<td>991.21&nbsp;<sup>6/</sup>&nbsp;/ 525.88<sup>7</sup></td>
+		</tr>
+		<tr>
+			<td>Average Times Sleeping</td>
+			<td>1.12</td>
+		</tr>
+		<tr>
+			<td>Average Minutes Asleep</td>
+			<td>419.17</td>
+		</tr>
+		<tr>
+			<td>Average Minutes in Bed</td>
+			<td>458.48</td>
+		</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.2 Overview of FitBit Fitness Tracker Data</span></span></strong></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.2.1 Activity</span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="color:rgba(0, 0, 0, 0.7)"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The CDC recommends that people complete 150 minutes of moderate activity a week. This averages to 21.4 minutes of moderate activity a day. To calculate how many of our users meet this metric, we will add the Very Active and Fairly Active minutes and determine each users daily average. If it is &gt;= 21.4 minutes/day they will be considered as meeting this metric. If it is &lt; 21.4 minutes/day we will consider it not meeting the CDC guidelines. It is important that we look at this by day average because not all users submitted the same amount of days data and, therefore, they might appear to not meet the weekly metric.</span></span></span></span></span></p>
+
+<p><img src="images/Activity.png" style="height:463px; width:880px" /></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">From the data, we can see that 42.42% of users did not meet the &gt;/= 21.4 min/day requirement while 57.58% did.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.2.2 Steps</span></span></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Studies have shown that higher daily step counts are linked to better health. While the common belief is that 10,000 steps are needed a day, a recent study by the National Cancer Institute, the National Institue on Aging, and the CDC, looked at three ranges for steps (4000, 8000, and 12000). Therefore, we will be using those &#39;steps&#39; as our guide. We will consider anyone who has less 4,000 steps as &quot;Inactive&quot;, anyone between 4,000-7,999 steps as &quot;Lightly Active&quot;, anyone between 8,000-11,999 steps as &quot;Moderately Active&quot;, and anyone above 12,000 steps as &quot;Very Active&quot;.</span></span></span></p>
+
+<p><img src="images/Steps.png" style="height:463px; width:880px" /></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Only 9.09% of the users had 12,000 or more average steps in a day, 18.18% of users had less than 4,000 steps in a day and are therefore, considered inactive.</span></span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">If we break this down by the usual 10,000 steps plus we can see that more users have reached this metric (21.21%). This is probably because the common thought is that 10,000 steps/day is what is needed to be considered healthy. However, there are still many users who did not reach 10.000 steps/day.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.2.3 Calories</span></span></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Therefore, we will group by the range of calorie levels with the following criteria: &lt; 1500 calories/day = &quot;Low Calorie Burn&quot;, 1,500-3,000 calories/day = &quot;Average Calorie Burn&quot;, and &gt; 3000 calories/day = &quot;High Calorie Burn&quot;.</span></span></span></span></p>
+
+<p><img src="images/Calories.png" style="height:463px; width:880px" /></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.2.4 Sleep</span></span></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">While the hours of sleep each person needs a day can also vary depending on many factors, there are generally accepted healthy ranges for adults to sleep. Adults are recommended to get between 7-9 hours of sleep a day on average as per the National Sleep Foundation&#39;s guidelines. Therefore, we will use the following to group our users by the amount of sleep they get: more than 9 hours of sleep = &quot;Excess Sleep&quot;, between 7-9 hours of sleep = &quot;Average Sleep&quot;, and less than 7 hours as &quot;Deficient Sleep&quot;.</span></span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Another factor to look at is the difference between how long a user is in bed versus how much they are actually asleep. This may indicate how long it takes a user to fall asleep. According to the Cleveland Clinic, it takes the average person 5-20 minutes to fall asleep at night. More time may suggest a person is having difficulty sleeping. Less time may indicate that a person is very tired and sleep deficient (though a person who takes a long time to fall asleep may still be deficient). We will create the following groups: less than 5 minutes difference in sleep time and time in bed = &quot;Less Time in Bed&quot;, between 5 to 20 minutes = &quot;Average Time in Bed&quot;, and more than 20 minutes = &quot;Excess Time in Bed&quot;. </span></span></span></span></p>
+
+<p><img src="images/Sleep.png" style="height:463px; width:880px" /></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">We can see that the majority of users had less than 7 hours of sleep/night (54.17%) which would make them sleep deficient, and 41.67% of users get sufficient sleep.</span></span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The majority of users (66.67%) spent more than 20 minutes in bed on average where they were not sleeping.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.3 Basic Trends</span></span></strong></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.3.1 Sleep vs. Total Steps</span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Looking at users total minutes asleep versus total steps, we can see that there isn&#39;t any correlation between the two variables with an R<sup>2</sup>&nbsp;value of only 0.036.</span></span></span></span></p>
+
+<p><img src="images/SleepVsSteps.png" style="display:block; margin:auto; height:401px; width:700px" /></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.3.2 Sleep vs. <span style="background-color:white">Active Minutes</span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Looking at user&rsquo;s total minutes asleep versus activity minutes (Very Active + Fairly Active + Lightly Active), we can see, again, that there really is no correlation between the two variables with an R<sup>2</sup>&nbsp;value of only 0.0048.</span></span></span></span></p>
+
+<p><img src="images/SleepVsActive.png" style="display:block; margin:auto; height:401px; width:700px" /></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.3.3 Sleep vs. Sedentary Minutes</span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Here we can clearly see the negative relationship between sedentary minutes and <span style="background-color:white">total minutes asleep, with an R<sup>2</sup>&nbsp;value of 0.361.</span></span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">However, this correlation may be stronger due to the fact that the sedentary time INCLUDES time someone is sedentary in their sleep. Therefore, it makes sense that these two variables have a higher correlation.</span></span></span></span></span></p>
+
+<p><img src="images/SleepVsSedentary.png" style="display:block; margin:auto; height:401px; width:700px" /></p>
+
+<p><strong><span style="font-size:11.0pt"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Overall</span></span></span></strong><span style="font-size:11.0pt"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">, there does not appear to be much of any statistical significance when comparing the amount a person sleeps to their other health metrics.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.3.4 Calories vs. Total Steps</span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">We see positive correlation here between total steps and calories, with an R<sup>2</sup>&nbsp;value of 0.349, which is obvious - the more active we are, the more calories we burn.</span></span></span></span></p>
+
+<p><img src="images/CaloriesVsSteps.png" style="display:block; margin:auto; height:401px; width:700px" /></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.3.5 <span style="background-color:white">Calories vs. Active Minutes</span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">We also see positive correlation between activity minutes (Very Active + Fairly Active + Lightly Active) and calories, with an R<sup>2</sup>&nbsp;value of 0.223. Again, it indicates that the more active we are, the more calories we burn.</span></span></span></span></p>
+
+<p><img src="images/CaloriesVsActive.png" style="display:block; margin:auto; height:401px; width:700px" /></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.3.6 Calories vs. Sedentary Minutes</span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Comparing a users calorie burn in a day versus their sedentary minutes, we can see negative correlation with an R<sup>2</sup>&nbsp;value of only 0.011. When we compare this to the other metrics we compared to calorie burn, it is cleat that being more inactive, the less calories we burn.</span></span></span></span></p>
+
+<p><img src="images/CaloriesVsSedentary.png" style="display:block; margin:auto; height:401px; width:700px" /></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="font-size:14.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">5.4 Hourly Activity Trends</span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Activity by Hour of the Day</span></span></strong></span></span></p>
+
+<p><img src="images/Hourly Trends.png" style="display:block; margin:auto; height:401px; width:700px" /></p>
+<p>&nbsp;</p>
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Most activity happens between 5 pm and 7 pm, with the most at 6pm, and between 12 pm and 2 pm also being relatively high. I suppose, that people go to a gym or for a walk after finishing work, and around lunchtime, 12 pm, this may be from people walking to get lunch or being more active in a break at work.</span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">6. Recommendations</span></span></u></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Review: Bellabeat is a company that manufactures smart technologies for women to track varying aspects of their health. The company currently offers three different devices for tracking things such as activity, sleep, stress, and water intake. They also have an app (which users can use to see their health data) and a membership (which provides users with personalized health guidance)</span></span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">.</span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The marketing recommendations for Bellabeat products are as follows :</span></span></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">1. </span></span></strong><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Increase digital campaign showing the benefits to take at least 8,000 steps in a day for people&rsquo;s health</span></span></strong></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Average total steps per day are 7,638 which a little bit less for having health benefits for according to the CDC research. They found that taking 8,000 steps per day was associated with a 51% lower risk for all-cause mortality (or death from all causes). Taking 12,000 steps per day was associated with a 65% lower risk compared with taking 4,000 steps.</span></span></span></span></p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Bellabeat can encourage people to take at least 8,000 steps in a day by increasing digital campaign explaining the benefits for their health.</span></span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">2. App reminders to remind users if there are factors that have not been achieved or excess in the recommended daily target</span></span></strong></span></span></p>
+
+<p style="margin-left:19px; width:850px"><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">1) </span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The recommended total steps in a day are at least 8,000 steps, if users still don&#39;t meet this target, the Bellabeat app can remind users to go for a run or walk.</span></span></span></span></p>
+
+<p style="margin-left:19px; width:850px"><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Most activity happens between 5 pm and 7 pm - I suppose, that people go to a gym or for a walk after finishing work. Bellabeat can use this time to remind and motivate users to go for a run or walk.</span></span></span></span></p>
+
+<p style="margin-left:19px; width:850px"><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">2) &nbsp;If users consume daily calories less than or exceed their total daily calorie limit, the Bellabeat app can remind users to control their daily calorie consumption.</span></span></span></span></p>
+
+<p style="margin-left:19px; width:850px"><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">3) &nbsp;<span style="background-color:white">Adults are recommended to get between 7-9 hours of sleep a day on average as per the National Sleep Foundation&#39;s guidelines. Bellabeat should consider using app notifications to go to bed to ensure users get enough sleep, and sound an alarm when their sleep time exceeds the normal limit.</span></span></span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:12.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">3. Provide a guide to the recommended daily calorie count and suggest some ideas for meals menu for those who want to lose weight or gain weight in order to achieve their target</span></span></strong></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">If users want to lose weight, it&#39;s probably a good idea to control daily calorie consumption. Bellabeat can provide a recommended daily calorie guide and suggest some ideas for low-calorie meals menu.</span></span></span></p>
+
+<p><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">It&rsquo;s the same with users who want to gain weight.</span></span></p>
+
+			</div>
+		</div>
+	</div>
+		<div id="footer">
+			<div>
+				<p>&copy Copyright 2022 by Felice. All rights reserved</p>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- Template by freewebsitetemplates.com -->
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Business Solutions</title>
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />
+</head>
+<body>
+<div id="header-cont">
+	<div id="header">
+			<div id="logo">
+				<a href="index.html"><img src="images/logo.jpg" alt="" /></a>		
+			</div>		
+			<div class="menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="final-report.html">Final Report</a></li>
+                  <li><a href="activity-overview-dash.html">Dashboard</a></li>
+                  <li class="active"><a href="data-cleaning.html">Data Cleaning Process</a></li>
+                </ul>
+            </div>
+            <div class="clr"></div>
+	</div>
+</div>
+	<div id="container">
+		<div class="data-cleaning">
+			<h1>Data Cleaning Process</h1>
+			<div>
+            
+            <p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">1. Document Description</span></span></u></strong></span></span></p>
+
+<p class="dc-content"><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Data was obtained on Kaggle from the owner Mobius. The data was collected through a distributed survey through Amazon Mechanical Turk. 33 fitbit users consented to the submission of personal tracker data, including minute-level output for physical activity, heart rate, and sleep monitoring from 04/12/2016 to 05/12/2016.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Times New Roman&quot;,serif"><strong><u><span style="font-size:20.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">2. Data Tools Used</span></span></u></strong></span></span></p>
+
+<p class="dc-content"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">In this analysis, I will be using Microsoft Excel XLS for data sets fomat and basic cleaning, MySQL for the data cleaning, analysis and manipulation of data, Navicat Premium for the Database Graphical UI, and Tableau for the creation of visuals.</span></span></span></span></p>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Excel</span></span></strong></span></span></p>
+
+<ol>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Load all .CSV format data sets and saved them into .XLS format.</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Datasets were checked for duplicates using the &quot;Remove Duplicates&quot; data tool on all columns. The &quot;sleepDay_merged&quot; file contained 3 duplicates that were removed. None of the other hourly or daily datasets contained duplicates.</span></span></span></li>
+</ol>
+
+<p>&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><span style="font-size:16.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">MySQL</span></span></strong></span></span></p>
+
+<ol>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Import all 18 data sets into mysql tables.</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change date format of field ActivityDate and ActivityDay for all daily data tables to mysql date format &ldquo;<span style="background-color:white">YYYY-MM-DD</span></span>&rdquo;.</span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyactivity_merged <span style="color:#0070c0">SET </span>ActivityDate = STR_TO_DATE(ActivityDate, <span style="color:red">&quot;%m/%d/%Y&quot;</span>);</span></span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 940</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of dailyactivity_merged : 940</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailycalories_merged <span style="color:#0070c0">SET </span>ActivityDay = STR_TO_DATE(ActivityDay, <span style="color:red">&quot;%m/%d/%Y&quot;</span>);</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 940</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of dailycalories_merged : 940</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyintensities_merged <span style="color:#0070c0">SET </span>ActivityDay = STR_TO_DATE(ActivityDay, <span style="color:red">&quot;%m/%d/%Y&quot;</span>);</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 940</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of dailyintensities_merged : 940</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailysteps_merged <span style="color:#0070c0">SET </span>ActivityDay = STR_TO_DATE(ActivityDay, <span style="color:red">&quot;%m/%d/%Y&quot;</span>);</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 940</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of dailysteps_merged : 940</span></span></span></p>
+
+<ol start="3">
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change data type of field ActivityDate and ActivityDay for all daily data tables from string type to date type to help with analysis.</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change datetime format of field SleepDay in sleepday_merged data tables to mysql date format &ldquo;YYYY-MM-DD</span>&rdquo;.</span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Only date value is used in SleepDay field, because time value is equal for all data.</span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="color:black"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">sleepday_merged <span style="color:#0070c0">SET </span>SleepDay = DATE(STR_TO_DATE(SleepDay, </span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:red">&quot;%m/%d/%Y %h:%i:%s %p&quot;</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">));</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 410</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of sleepday_merged : 410</span></span></span></p>
+
+<ol start="5">
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change data type of field SleepDay in sleepday_merged data tables from string type to date type to help with analysis.</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change datetime format of field ActivityHour for all hourly data tables to mysql datetime format &ldquo;<span style="background-color:white">YYYY-MM-DD hh:mm:ss</span></span>&rdquo;.</span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">hourlycalories_merged <span style="color:#0070c0">SET </span>ActivityHour = STR_TO_DATE(ActivityHour,</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:red">&quot;%m/%d/%Y %h:%i:%s %p&quot;</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">);</span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 22099</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of hourlycalories_merged : 22099</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">hourlyintensities_merged </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SET </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">ActivityHour = STR_TO_DATE(ActivityHour,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:red">&quot;%m/%d/%Y %h:%i:%s %p&quot;</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">); </span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 22099</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of hourlyintensities_merged : 22099</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">hourlysteps_merged <span style="color:#0070c0">SET </span>ActivityHour = STR_TO_DATE(ActivityHour,</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:red">&quot;%m/%d/%Y %h:%i:%s %p&quot;</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">);</span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 22099</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of hourlysteps_merged : 22099</span></span></span></p>
+
+<ol start="7">
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change data type of field ActivityHour for all daily data tables from string type to datetime type to help with analysis.</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change data type of field VeryActiveMinutes, FairlyActiveMinutes, LightlyActiveMinutes, and SedentaryMinutes in dailyactivity_merged data tables from string type to integer type to help with analysis.</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change data type of field TotalSteps and Calories in dailyactivity_merged data tables from string type to integer type to help with analysis.</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Change data type of field TotalSleepRecords, TotalMinutesAsleep, and TotalTimeInBed in sleepday_merged data tables from string type to integer type to help with analysis.</span></span></span></li>
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">For the &quot;dailyActivity_merged&quot; data </span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">table</span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">, query checking was used to identify number of days the data was tracked for each user (</span><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">not exceed 31 days</span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">).</span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Id, COUNT(*) <span style="color:#0070c0">FROM </span>dailyactivity_merged</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">GROUP BY </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Id</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">HAVING </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:black">COUNT(*) &gt; <span style="color:#00b050">31</span>;</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The above line of code returned 0 data user that number of days the data was tracked exceed 31 days.</span></span></span></p>
+
+<ol start="12">
+	<li><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">For the &quot;dailyActivity_merged&quot; data </span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">table</span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">, query checking was used to identify total time tracked a day for each user to verify that no times exceeded the total time in a day (</span><span style="background-color:white"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:black">not exceed 1440 minutes</span></span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">).</span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(VeryActiveMinutes + FairlyActiveMinutes + LightlyActiveMinutes +</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">SedentaryMinutes) <span style="color:#0070c0">AS </span>TotalMinutes</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyactivity_merged</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(VeryActiveMinutes + FairlyActiveMinutes + LightlyActiveMinutes +</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">SedentaryMinutes) &gt; <span style="color:#00b050">1440</span>;</span></span></span></span></p>
+</span>
+
+<p style="margin-left:24px"><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">The above line of code returned 0 data user that total time tracked a day was exceeded the total time in a day (exceed <span style="background-color:white">1440 minutes).</span></span></span></span></p>
+
+<p style="margin-left:28px">&nbsp;</p>
+
+<p><span style="font-size:11pt"><span style="font-family:Calibri,sans-serif"><strong><u><span style="font-size:15.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Manipulation of Data</span></span></u></strong></span></span></p>
+
+<p>&nbsp;</p>
+
+<ol>
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Create new table named “dailyandsleep_merged” to merge </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyActivity with SleepDay records using Left Join clause.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">INSERT INTO </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyandsleep_merged (Id, ActivityDate, TotalSteps, TotalDistance,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">TrackerDistance, LoggedActivitiesDistance, VeryActiveDistance,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">ModeratelyActiveDistance, LightActiveDistance, SedentaryActiveDistance,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">VeryActiveMinutes, FairlyActiveMinutes,LightlyActiveMinutes, SedentaryMinutes,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Calories, SleepDay, TotalSleepRecords, TotalMinutesAsleep, TotalTimeInBed)</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">a.Id, a.ActivityDate, a.TotalSteps, a.TotalDistance, a.TrackerDistance,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">a.LoggedActivitiesDistance, a.VeryActiveDistance, a.ModeratelyActiveDistance,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">a.LightActiveDistance, a.SedentaryActiveDistance, a.VeryActiveMinutes,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">a.FairlyActiveMinutes, a.LightlyActiveMinutes, a.SedentaryMinutes, a.Calories,</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">b.SleepDay, b.TotalSleepRecords, b.TotalMinutesAsleep, b.TotalTimeInBed</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyactivity_merged a </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">LEFT JOIN </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">sleepday_merged b</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">ON </span></span></span><span style="font-size:11.0pt"><span style="color:black"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">a.Id = b.Id <span style="color:#0070c0">AND </span>a.ActivityDate = b.SleepDay;</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 940</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of dailyandsleep_merged : 940</span></span></span></span></p>
+
+<ol start="2">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Create new table to save the summary statistics named &ldquo;summarydaily_merged&rdquo;.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">CREATE TABLE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">summarydaily_merged (</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; Id </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">varchar</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">255</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">),</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; AvgTotalSteps </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">decimal</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">10</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">,</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">3</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">),</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; AvgVeryActiveMinutes </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">decimal</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">10</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">,</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">3</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">),</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; AvgFairlyActiveMinutes </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">decimal</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">10</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">,</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">3</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">),</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; AvgLightlyActiveMinutes </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">decimal</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">10</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">,</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">3</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">),</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; AvgSedentaryMinutes </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">decimal</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">10</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">,</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">3</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">),</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; AvgCalories </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">decimal</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">10</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">,</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">3</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">),</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; AvgTotalMinutesAsleep </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">decimal</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">10</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">,</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">3</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">),</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">&nbsp;&nbsp;&nbsp; AvgTotalTimeInBed </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">decimal</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">10</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">,</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#00b050">3</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">)</span></span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">);</span></span></p>
+</span>
+
+<ol start="3">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Calculate average of total steps of each users and save it to table summarydaily_merged.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">INSERT INTO </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">summarydaily_merged (Id, AvgTotalSteps)</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Id, AVG(TotalSteps)</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyandsleep_merged</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">GROUP BY </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:black">Id;</span></span></span></p>
+</span>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 33</span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of summarydaily_merged : 33</span></span></span></span></p>
+
+<ol start="4">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Calculate average of activity minutes by level of each users and save it to table summarydaily_merged.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">summarydaily_merged s</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SET </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AvgVeryActiveMinutes = (</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AVG(VeryActiveMinutes) </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyandsleep_merged</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Id = s.Id),</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AvgFairlyActiveMinutes = (</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AVG(FairlyActiveMinutes) </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"> dailyandsleep_merged</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Id = s.Id),</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AvgLightlyActiveMinutes = (</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AVG(LightlyActiveMinutes) </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyandsleep_merged</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Id = s.Id),</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AvgSedentaryMinutes = (</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AVG(SedentaryMinutes) </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyandsleep_merged</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:black">Id = s.Id);</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 33</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of summarydaily_merged : 33</span></span></span></span></p>
+
+<ol start="5">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Calculate average of calories burned of each users and save it to table summarydaily_merged.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">summarydaily_merged s </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SET </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AvgCalories = (</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AVG(Calories)</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:black">dailyandsleep_merged </span><span style="color:#0070c0">WHERE </span><span style="color:black">Id = s.Id);</span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 33</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of summarydaily_merged : 33</span></span></span></span></p>
+
+<ol start="6">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Calculate average of total minutes asleep of each users and save it to table summarydaily_merged.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">summarydaily_merged s </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SET </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AvgTotalMinutesAsleep =</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT</span></span></span> <span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">COALESCE</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(AVG(TotalMinutesAsleep),0) </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyandsleep_merged </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Id = s.Id);</span></span></span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 33</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of summarydaily_merged : 33</span></span></span></span></p>
+
+<ol start="7">
+	<li><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Calculate average of total time in bed of each users and save it to table summarydaily_merged.</span></span></span></span></li>
+</ol>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Query syntax :</span></span></span></span></p>
+
+<span class="query">
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">UPDATE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">summarydaily_merged s </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SET </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">AvgTotalTimeInBed =</span></span></span></span></span></p>
+
+<p style="margin-left:24px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="color:black"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(</span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">SELECT COALESCE</span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">(AVG(TotalTimeInBed),0) </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">FROM </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">dailyandsleep_merged </span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif"><span style="color:#0070c0">WHERE </span></span></span><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Id = s.Id);</span></span></span></span></span></p>
+</span>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Affected rows : 33</span></span></span></span></p>
+
+<p style="margin-left:28px"><span style="font-size:12pt"><span style="font-family:&quot;Open Sans&quot;,sans-serif"><span style="font-size:11.0pt"><span style="font-family:&quot;Segoe UI&quot;,sans-serif">Total records of summarydaily_merged : 33</span></span></span></span></p>
+
+			</div>
+		</div>
+	</div>
+		<div id="footer">
+			<div>
+				<p>&copy Copyright 2022 by Felice. All rights reserved</p>
+			</div>
+		</div>
+	</body>
+</html>
