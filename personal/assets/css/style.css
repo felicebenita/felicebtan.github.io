@@ -376,7 +376,7 @@ img.bg {
 }
 .featured h3 {
 	color: #0056AC;
-	font-size: 18px;	
+	font-size: 19px;	
 	line-height: 22px;
 	margin: 0;
 	padding: 5px 20px 20px 20px;
@@ -384,14 +384,14 @@ img.bg {
 }
 .featured li h3 {
 	color: #3B3B3B;
-	font-size: 17px;	
+	font-size: 18px;	
 	line-height: 22px;
 	margin: 0;
 	padding: 0 20px;
 	text-align: justify;
 }
 .featured li span.cls0 {
-	color: #232323;
+	color: #070707;
 	display: block;
 	font-size: 13px;	
 	line-height: 20px;

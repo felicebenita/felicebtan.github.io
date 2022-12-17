@@ -52,10 +52,7 @@ body {
 	z-index:0;
 }
 
-#container .contact,
 #container .about,
-#container .services,
-#container .blog,
 #container .data-cleaning {
 	margin: auto;
 	padding: 25px 30px 50px 20px;	
@@ -86,7 +83,7 @@ body {
 	text-transform: uppercase;
 }
 #container .about ol {
-	color: #5d5d5d;
+	color: #3B3B3B;
 	line-height: 24px;
 	margin: 10px 0 0 30px;
 	padding: 0;
@@ -102,7 +99,7 @@ body {
 	width: 860px;
 }
 #container .about p {
-	color: #5d5d5d;
+	color: #3B3B3B;
 	font-size: 14px;
 	line-height: 24px;
 	margin: 10px 0 0;
@@ -127,7 +124,7 @@ body {
 	line-height: 24px;
 }
 #container .data-cleaning p {
-	color: #5d5d5d;
+	color: #3B3B3B;
 	font-size: 14px;
 	line-height: 18px;
 	margin: 10px 0 0;
@@ -162,41 +159,9 @@ body {
 	padding: 0;
 	text-transform: uppercase;
 }
-#footer div div ul,
-#footer div div ul li {
-	margin: 0;
-	list-style: none;
-	padding: 0;	
-}	
-#footer div div ul li {
-	font-size: 12px;
-	line-height: 22px;
-	color: #818a8c;	
-}
-#footer div a.facebook,
-#footer div a.twitter {
-	display: block;
-	float: left;
-	height: 27px;
-	margin: 10px 0 0;
-	text-indent: -99999em;
-	width: 40px;	
-}
-#footer div a.facebook,
-#footer div a.twitter {
-	background: url(images/icons.gif) no-repeat;	
-}
-#footer div a.facebook {
-	background-position: 0 0;
-	margin: 10px 0 0 58px;
-	_margin: 10px 0 0 28px;
-}
-#footer div a.twitter {
-	background-position: 0 -37px;
-}
 #footer div p {
-	color: #c1c1c1;
-	font-size: 12px;
+	color: #252525;
+	font-size: 13px;
 	margin: 0;
 	padding: 0 0 30px 0;
 	text-align: center;	
