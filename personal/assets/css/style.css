@@ -183,7 +183,7 @@ img.bg {
 
 /* ABOUT ----------------------------------------------------*/
 
-.about-rez { margin:0 auto; width:880px; background-color:#fff;}
+.about-rez { margin:0 auto; background-color:#fff;}
 .about-rez span {
 	color: #070707;
 	display: block;
@@ -194,6 +194,7 @@ img.bg {
 	text-align: justify;
 }
 .about-rez span.about-header {
+	margin: 0 8px;
 	color: #0056AC;
 	display: block;
 	font-size: 15px;
@@ -203,23 +204,22 @@ img.bg {
 }
 .about-rez .col { margin:0 auto; float:left;}
 .about-rez .c1 {
-	margin: 30px 0 40px 0;
+	margin: 30px 0 40px 5px;
 	padding-bottom: 14px;
 	width: 280px;
 }
 .about-rez .c2 {
-	margin: 26px 0 40px 26px;
-	width: 564px;
+	margin: 26px 0 40px 28px;
+	width: 580px;
 }
 .about-rez .c3 {
 	margin: 20px 0 10px 0;
 	padding-bottom: 14px;
-	width: 328px;
+	width: 350px;
 }
 .about-rez .c4 {
 	margin: 20px 0 10px 0;
 	padding-bottom: 14px;
-	width: 230px;
 }
 .about-rez .c1 img {
 	width: 280px;
@@ -248,12 +248,12 @@ img.bg {
 
 /* SKILLS ----------------------------------------------------*/
 
-.fbg_resize { margin:0 auto; padding-top: 10px; width:880px; background-color:#fff;}
+.fbg_resize { margin:0 auto; padding-top:10px; background-color:#fff;}
 .fbg_resize .col { margin:0 auto; float:left;}
 .fbg_resize .c1 {
-	margin: 0 20px 40px 0;
+	margin: 0 35px 40px 0;
 	padding-bottom: 14px;
-	width: 422px;
+	width: 425px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
@@ -261,7 +261,7 @@ img.bg {
 .fbg_resize .c2 {
 	margin: 0 0 40px 15px;
 	padding-bottom: 14px;
-	width: 422px;
+	width: 425px;
 	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
@@ -507,18 +507,18 @@ img.bg {
 
 /* CONTACT ----------------------------------------------------*/
 
-.contact-rez { margin:0 auto; padding-top: 10px; width:890px; background-color:#fff;}
+.contact-rez { margin:0 auto; padding-top: 10px; background-color:#fff;}
 .contact-rez .col { margin:0 auto; float:left;}
 .contact-rez .c1 {
-	margin: 0 20px 40px 0;
+	margin: 0 15px 40px 0;
 	padding-bottom: 14px;
 	width: 332px;
 	
 }
 .contact-rez .c2 {
-	margin: 0 0 40px 5px;
+	margin: 0 0 40px 3px;
 	padding-bottom: 14px;
-	width: 522px;
+	width: 535px;
 	
 }
 .contact-rez ul.ctc-list {

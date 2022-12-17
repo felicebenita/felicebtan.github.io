@@ -3,14 +3,13 @@ a { color: #06C; text-decoration: underline; }
 a:hover { color: #0000B3; text-decoration: none; }
 
 .res-content {
+	margin: 0 auto;
 	padding: 0;
-	margin: 0;
 }
 .res-title {
 	display: block;
-	width: 854px;
 	height: 50px;
-	margin: 0 auto;
+	margin-left: 8px;
 	background: url(../images/bg-content.gif) repeat-x center bottom;
 	text-align: center;
 	line-height: 52px;
@@ -29,8 +28,7 @@ h3 {
 	padding-top: 14px;
 }
 .edu-list {
-	width: 854px;
-	padding: 8px 20px 5px 50px;
+	padding: 8px 20px 5px 40px;
 }
 .edu-list h3 {
 	font-size: 18px;
@@ -63,8 +61,7 @@ h3 {
 }
 
 .res-list {
-	width: 854px;
-	padding: 8px 20px 5px 30px;
+	padding: 8px 5px 5px 20px;
 }
 
 ul.list-lvl0 li img.bul-li {
@@ -131,7 +128,7 @@ ul.list-lvl1 li {
 	overflow: hidden;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 6px;
-	margin-left: 42px;
+	margin-left: 47px;
 }
 ul.list-lvl1 li:last-child {
 	border-bottom: none;
@@ -153,7 +150,7 @@ ul.list-desc li {
 	cursor: pointer;
 	display: table;
 	padding: 0 0 0 12px;
-	margin: 18px 0 5px 25px;
+	margin: 18px 0 5px 30px;
 	font-size: 14px;
 	font-family: Georgia, arial;
 	letter-spacing: 1px;
