@@ -185,60 +185,62 @@ img.bg {
 
 .about-rez { margin:0 auto; width:880px; background-color:#fff;}
 .about-rez span {
-	color: #4A4A4A;
+	color: #070707;
 	display: block;
 	font-size: 13px;	
-	line-height: 18px;
+	line-height: 19px;
 	margin: 0;
 	padding: 0;
 	text-align: justify;
 }
+.about-rez span.about-header {
+	color: #0056AC;
+	display: block;
+	font-size: 15px;
+	font-weight: 600;	
+	line-height: 22px;
+	text-align: center;
+}
 .about-rez .col { margin:0 auto; float:left;}
 .about-rez .c1 {
-	margin: 26px 0 40px 0;
+	margin: 30px 0 40px 0;
 	padding-bottom: 14px;
 	width: 280px;
-	border: 1px solid #dbddde;
 }
 .about-rez .c2 {
 	margin: 26px 0 40px 26px;
 	width: 564px;
-	border: 1px solid #dbddde;
 }
 .about-rez .c3 {
-	margin: 24px 0 10px 0;
+	margin: 20px 0 10px 0;
 	padding-bottom: 14px;
-	width: 290px;
-	border: 1px solid #dbddde;
+	width: 328px;
 }
 .about-rez .c4 {
-	margin: 24px 0 10px 0;
+	margin: 20px 0 10px 0;
 	padding-bottom: 14px;
-	width: 270px;
-	border: 1px solid #dbddde;
+	width: 230px;
 }
 .about-rez .c1 img {
-	width: 240px;
-	height: 405px;
+	width: 280px;
+	height: 350px;
 }
 .about-rez .c2 span {
 	padding-top: 5px;
 }
 .about-rez .c3 span, .about-rez .c4 span {
-	color: #4A4A4A;
 	display: block;
 	font-size: 14px;
 	line-height: 38px;
 	text-align: justify;
 }
 .about-rez h2 {
-	color: #3B3B3B;
+	color: #515151;
 	font-family: "Segoe UI", sans-serif;
 	letter-spacing: 0.8px;
 	font-size: 30px;	
 	line-height: 34px;
 	margin: 0;
-	padding: 0;
 	text-align: justify;
 	padding: 4px 0 14px 0;
 }

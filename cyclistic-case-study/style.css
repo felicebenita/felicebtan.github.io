@@ -40,8 +40,8 @@ body {
 
 #header .menu ul { margin:87px 20px 0 0; padding:0; float:right; width:550px; list-style:none;}
 #header .menu ul li { margin:0 4px; float:left; font-family:Tahoma, Geneva, sans-serif; font-size:17px;}
-#header .menu ul li a { display:block; margin:0; padding:6px 16px; color:#5f5f5f; text-decoration:none; border:1px solid #fff;}
-#header .menu ul li a:hover, #header .menu ul li.active a { border-color:#dedede;}
+#header .menu ul li a { display:block; margin:0; padding:6px 16px; color:#5f5f5f; text-decoration:none;}
+#header .menu ul li a:hover, #header .menu ul li.active a { color:#202020; border:1px solid #838383;}
 
 #container {
 	background: url(images/bg-content.gif) repeat-x top left;
@@ -113,7 +113,7 @@ body {
 	color: #2a4f5e;	
 }
 #container .data-cleaning ol {
-	color: #5d5d5d;
+	color: #3B3B3B;
 	line-height: 28px;
 	margin: 10px 0 0 30px;
 	padding: 0;

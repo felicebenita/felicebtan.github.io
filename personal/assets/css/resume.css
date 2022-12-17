@@ -139,6 +139,13 @@ ul.list-lvl1 li:last-child {
 ul.list-lvl1 h3 {
 	padding-left: 2px;
 }
+ul.list-desc li {
+	overflow: visible;
+	list-style-type: disc;
+	padding-bottom: 3px;
+	margin-left: 28px;
+	border-bottom: none;
+}
 
 /* COMMENTS ------------------------------------------------------------*/
 
@@ -181,11 +188,3 @@ ul.list-lvl1 h3 {
 .comments-switcher {	
 }
 
-
-ul.list-desc li {
-	overflow: visible;
-	list-style-type: disc;
-	padding-bottom: 3px;
-	margin-left: 28px;
-	border-bottom: none;
-}
