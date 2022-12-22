@@ -3,24 +3,34 @@ a { color: #06C; text-decoration: underline; }
 a:hover { color: #0000B3; text-decoration: none; }
 
 .res-content {
-	margin: 0 auto;
+	margin-top: 95px;
 	padding: 0;
 }
+
+.res-menu { margin:0 auto; padding-bottom:10px;}
+.res-menu ul.res-list-menu { margin:0 auto; padding:0; width:800px; list-style:none;}
+.res-menu ul.res-list-menu li { 
+	margin:0 20px; float:left; width:360px; text-align:center;
+	font-size:18px; color:#333;
+}
+.res-menu ul.res-list-menu li a { 
+	display:block; margin:0; padding:8px 0;
+	color:#252525; text-decoration:none; border: 2px solid #0056AC;
+}
+.res-menu ul.res-list-menu li a:hover, .res-menu ul li.active a { color:#fff; background: #0056AC;}
+
 .res-title {
 	display: block;
-	height: 50px;
-	margin-left: 8px;
-	background: url(../images/bg-content.gif) repeat-x center bottom;
-	text-align: center;
-	line-height: 52px;
-	font-family: "Segoe UI", sans-serif;
-	font-size: 21px;
-	color: #EAEAEA;
+	height: 25px;
+	margin: 20px 0 0 18px;
+	letter-spacing: 0.3px;
+	font-size: 22px;
+	color: #0056AC;
 	font-weight: 640;
 }
 h3 {
 	color: #3B3B3B;
-	font-size: 17.6px;	
+	font-size: 17px;	
 	line-height: 22px;
 	margin: 0;
 	padding: 0;
@@ -28,7 +38,7 @@ h3 {
 	padding-top: 14px;
 }
 .edu-list {
-	padding: 8px 20px 5px 40px;
+	padding: 8px 20px 5px 36px;
 }
 .edu-list h3 {
 	font-size: 18px;
@@ -56,18 +66,19 @@ h3 {
 	font-size: 15px;
 	font-style: italic;
 	line-height: 16px;
-	margin: 4px 0 14px 0;
+	margin: 4px 0 10px 0;
 	padding: 0;
 }
 
 .res-list {
-	padding: 8px 5px 5px 20px;
+	padding: 8px 0 25px 22px;
 }
 
 ul.list-lvl0 li img.bul-li {
 	width: 16px;
 	height: 16px;
-	margin: 0 6px 0 1px;
+	margin: 0 6px -2px 1px;
+	
 }
 ul.list-lvl0 li {
 	overflow: hidden;
@@ -128,7 +139,7 @@ ul.list-lvl1 li {
 	overflow: hidden;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 6px;
-	margin-left: 47px;
+	margin-left: 54px;
 }
 ul.list-lvl1 li:last-child {
 	border-bottom: none;
@@ -150,7 +161,7 @@ ul.list-desc li {
 	cursor: pointer;
 	display: table;
 	padding: 0 0 0 12px;
-	margin: 18px 0 5px 30px;
+	margin: 18px 0 5px 32px;
 	font-size: 14px;
 	font-family: Georgia, arial;
 	letter-spacing: 1px;
@@ -185,3 +196,108 @@ ul.list-desc li {
 .comments-switcher {	
 }
 
+/* Experience */
+
+.exp-list {
+	padding: 8px 0 25px 22px;
+}
+.exp-list ul.exp-lvl0 li {
+	overflow: hidden;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.exp-list ul.exp-lvl0 li:last-child {
+	border-bottom: none;
+}
+.exp-list ul.exp-lvl0 li h3 {
+	float: left;
+	float: left;
+	display: block;
+	font-size: 17px;
+	font-weight: bold;	
+	line-height: 22px;
+	margin: 5px 8px 0 0;
+	padding: 0;
+}
+.exp-list ul.exp-lvl0 li span {
+	display: block;
+	padding: 0;
+}
+.exp-list ul.exp-lvl0 li span.exp0 {
+	color: #232323;
+	float: left;
+	font-size: 16px;
+	margin: 4px 0 0 0;
+}
+.exp-list ul.exp-lvl0 li span.exp1 {
+	color: #004A95;
+	font-size: 16px;	
+	font-weight: bold;	
+	line-height: 22px;
+	margin: 9px 0 0 23px;
+}
+.exp-list ul.exp-lvl0 li span.exp2 {
+	color: #797979;
+	font-size: 14px;
+	font-weight: bold;	
+	line-height: 18px;
+	margin: 4px 0 0 24px;
+	
+}
+.exp-list ul.exp-lvl0 li span.exp-sep {
+	color: #797979;
+	float: left;
+	font-size: 16px;
+	font-weight: bold;	
+	line-height: 22px;
+	margin: 3px 6px 0 0;
+}
+.exp-list ul.exp-lvl0 li span.exp3 {
+	color: #070707;
+	font-size: 13px;
+	line-height: 20px;
+	margin: 6px 0 0 24px;
+}
+.exp-list ul.exp-lvl0 li span.exp4 {
+	color: #070707;
+	font-size: 13px;	
+	line-height: 19px;
+	margin: 12px 20px 0 52px;
+	text-align: justify;
+}
+.exp-list ul.exp-lvl0 li span.exp5 {
+	color: #070707;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 22px;
+	margin: 6px 0 0 28px;
+}
+.exp-list ul.exp-lvl0 li img.bul-li {
+	width: 16px;
+	height: 16px;
+	margin: 0 6px -2px 1px;
+	
+}
+.exp-list ul.exp-lvl0 li ul.exp-desc li {
+	margin: 0;
+	overflow: visible;
+	list-style-type: disc;
+	padding-bottom: 3px;
+	border-bottom: none;
+}
+
+.exp-list ul.exp-lvl0 li .col { display: block; margin:0 auto; float:left;}
+.exp-list ul.exp-lvl0 li .e1 {
+	float:left;
+	margin: 2px 0 0 28px;
+	padding-bottom: 2px;
+	width: 380px;
+	
+}
+.exp-list ul.exp-lvl0 li .e2 {
+	margin: 2px 0 0 28px;
+	padding-bottom: 2px;
+	width: 360px;
+	
+}

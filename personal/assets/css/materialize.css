@@ -176,7 +176,6 @@ a {
 
 html {
   line-height: 1.5;
-  font-family: "Roboto", sans-serif;
   font-weight: normal;
   color: rgba(0, 0, 0, 0.87); }
   @media only screen and (min-width: 0) {
@@ -197,10 +196,6 @@ strong {
 
 small {
   font-size: 75%; }
-
-.light, footer.page-footer .footer-copyright {
-  font-weight: 300; }
-
 
 .btn, .btn-large, .btn-flat {
   display: inline-block;
@@ -241,7 +236,8 @@ small {
   -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
   cursor: pointer; }
-  .btn:hover, .btn-large:hover {
+  
+.btn:hover, .btn-large:hover {
     background-color: #39C; }
 
 /*!
@@ -379,6 +375,50 @@ a.waves-effect .waves-ripple {
       margin: 6px 0; }
 
 
+.materialboxed {
+  cursor: zoom-in;
+  position: relative;
+  -webkit-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -ms-transition: opacity 0.4s;
+  transition: opacity 0.4s; }
+  .materialboxed:hover {
+    will-change: left, top, width, height; }
+    .materialboxed:hover:not(.active) {
+      -ms-filter: "progid:DXImageTransform@mixin Microsoft@mixin Alpha(Opacity=${iefactor})";
+      filter: "alpha(opacity=(${iefactor}))";
+      -moz-opacity: 0.8;
+      -khtml-opacity: 0.8;
+      opacity: 0.8; }
+
+.materialboxed.active {
+  cursor: zoom-out; }
+
+#materialbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #292929;
+  z-index: 999;
+  will-change: opacity; }
+
+.materialbox-caption {
+  position: fixed;
+  display: none;
+  color: #fff;
+  line-height: 50px;
+  bottom: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 0% 15%;
+  height: 50px;
+  z-index: 1000;
+  -webkit-font-smoothing: antialiased; }
+
 /* Remove Focus Boxes */
 select:focus {
   outline: 1px solid #f8c1c3; }
@@ -496,7 +536,7 @@ textarea.materialize-textarea {
   padding: 1.6rem 0;
   /* prevents text jump on Enter keypress */
   resize: none;
-  min-height: 3rem; }
+  min-height: 5rem; }
 
 
 /*********************

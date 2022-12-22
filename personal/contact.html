@@ -7,6 +7,8 @@
   <link rel="stylesheet" type="text/css" href="assets/fonts/font.css" />
   <link rel="stylesheet" type="text/css" href="assets/css/style.css" media="all" />
   <link href="assets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <script src="assets/js/jquery-2.1.1.min.js"></script>
+  <script src="assets/js/materialize.js"></script>
 </head>
 <body>
 <div id="header-cont">
@@ -18,7 +20,7 @@
                 <ul>
                   <li><a href="index.html">Home</a></li>
                   <li><a href="about.html">About</a></li>
-                  <li><a href="resume.html">Resume</a></li>
+                  <li><a href="resume-edu.html">Resume</a></li>
                   <li><a href="skills.html">Skills</a></li>
                   <li><a href="portfolio.html">Portfolio</a></li>
                   <li class="active"><a href="contact.html">Contact</a></li>
@@ -102,5 +104,12 @@
 		<p>&copy Copyright 2022 by <strong>Felice</strong>. All rights reserved</p>
 	</div>
 </div>
+
+<script>
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+});
+</script>
+
 </body>
 </html>

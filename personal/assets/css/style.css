@@ -107,11 +107,6 @@ a { color:#e37431; text-decoration:none;}
 	width: 870px;
 }
 
-.pf-content {
-	margin: 0;
-	padding: 0;
-}
-
 #footer {
 	background: #043A6C url(../images/bg-footer.gif) repeat-x top left;
 	margin: auto;
@@ -212,7 +207,7 @@ img.bg {
 	margin: 0 8px;
 	color: #0056AC;
 	display: block;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: 600;	
 	line-height: 22px;
 	text-align: center;
@@ -375,6 +370,11 @@ img.bg {
 
 /* PORTFOLIO ----------------------------------------------------*/
 
+
+.pf-content {
+	margin: 0;
+	padding-bottom: 20px;
+}
 .featured {
 	margin-top: 20px;
 }
@@ -506,17 +506,20 @@ img.bg {
 .gallery-thumbs>li .thumb-description p,
 .work-thumbs>li .thumb-description p{
 	margin-bottom: 0px;
+	font-size: 12.5px;
+	line-height: 18px;
 }
 
 .gallery-thumbs>li .thumb-description .thumb-title,
 .work-thumbs>li .thumb-description .thumb-title{
 	display: block;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: bold;
+	line-height: 22px;
 	color: #333333;
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 10px;
-	padding-bottom: 10px;
+	padding-bottom: 7px;
 }
 
 
@@ -525,13 +528,13 @@ img.bg {
 .contact-rez { margin:0 auto; padding-top: 10px; background-color:#fff;}
 .contact-rez .col { margin:0 auto; float:left;}
 .contact-rez .c1 {
-	margin: 0 15px 40px 0;
+	margin: 0 18px 40px 2px;
 	padding-bottom: 14px;
 	width: 332px;
 	
 }
 .contact-rez .c2 {
-	margin: 0 0 40px 3px;
+	margin: 0 0 40px 0;
 	padding-bottom: 14px;
 	width: 535px;
 	
