@@ -12,7 +12,8 @@ input {
 label {
 	display: inline-block;
 	margin: 0 0 -1px;
-	padding: 15px 25px;
+	padding: 15px 20px;
+	font-size: 18px;
 	font-weight: 620;
 	text-align: center;
 	color: #bbb;
@@ -71,7 +72,7 @@ input:checked + label {
 
   label:before {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 400px) {

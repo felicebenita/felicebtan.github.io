@@ -21,12 +21,14 @@ a:hover { color: #0000B3; text-decoration: none; }
 
 .res-title {
 	display: block;
-	height: 25px;
+	height: 24px;
 	margin: 20px 0 0 18px;
-	letter-spacing: 0.3px;
-	font-size: 22px;
+	font-family: "Raleway", sans-serif;
+
+	font-size: 21px;
 	color: #0056AC;
-	font-weight: 640;
+	font-weight: bold;
+	text-transform: uppercase;
 }
 h3 {
 	color: #3B3B3B;
