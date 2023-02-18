@@ -71,7 +71,6 @@ h3 {
 	margin: 4px 0 10px 0;
 	padding: 0;
 }
-
 .res-list {
 	padding: 8px 0 25px 22px;
 }
@@ -130,6 +129,15 @@ ul li span.cls4 {
 	margin: 10px 20px 0 22px;
 	padding: 0;
 	text-align: justify;
+}
+ul li span.cls5 {
+	color: #424242;
+	display: block;
+	float: left;
+	font-size: 14px;	
+	line-height: 20px;
+	margin: 5px 8px 0 8px;
+	padding: 0;
 }
 ul.list-lvl0 li img.ico {
 	width: 16px;
